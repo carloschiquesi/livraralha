@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site de Livros</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="paginaInicial">
+        <h1>Livraralha</h1>
+        <p>Clique <a href="#" onclick="mostrarLivros()">aqui</a> para ver os livros disponíveis.</p>
+        <p>Para fazer login, clique <a href="#" onclick="fazerLogin()">aqui</a>.</p>
+    </div>
+
+    <div id="livros" style="display: none;">
+        <h1>Livros Disponíveis</h1>
+        <div class="livro">
+            <img src="livro1.jpg" alt="Livro 1" onclick="mostrarDetalhesLivro(1)">
+        </div>
+        <div class="livro">
+            <img src="livro2.jpg" alt="Livro 2" onclick="mostrarDetalhesLivro(2)">
+        </div>
+    </div>
+
+    <div id="detalhesLivro" style="display: none;">
+        <h1>Detalhes do Livro</h1>
+        <p>Nome: <span id="nomeLivro"></span></p>
+        <p>Autor: <span id="autorLivro"></span></p>
+        <p>Descrição: <span id="descricaoLivro"></span></p>
+        <button id="botaoEditar" onclick="editarLivro()">Editar</button>
+    </div>
+
+    <div id="loginForm" style="display: none;">
+        <h1>Login</h1>
+        <form id="formLogin">
+            <label for="username">Nome de usuário:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
